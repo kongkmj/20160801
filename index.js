@@ -450,8 +450,8 @@ var notidata005y = parseInt(rule_005.rule005y);
 
 
 // (1) 알람 연산
-var plus001x = (parse1);
-var plus001y = (parse1);
+var plus001x = notidata001x +parseInt(parse1);
+var plus001y = notidata001y +parseInt(parse1);
 var minus001x =  (parse1);
 var minus001y =  (parse1);
 
@@ -465,8 +465,8 @@ if((parsingdata[0]<=plus001x)&&(parsingdata[1]<=plus001y)){
 
 
 // (2) 알람 연산
-var plus002x = parseInt(parse2);
-var plus002y = parseInt(parse2);
+var plus002x = notidata002x +parseInt(parse2);
+var plus002y = notidata002y +parseInt(parse2);
 var minus002x =  parseInt(parse2);
 var minus002y =  parseInt(parse2);
 
@@ -479,8 +479,8 @@ if((parsingdata[2]<=plus002x)&&(parsingdata[3]<=plus002y)){
 
 
 // (3) 알람 연산
-var plus003x = parseInt(parse3);
-var plus003y = parseInt(parse3);
+var plus003x = notidata003x +parseInt(parse3);
+var plus003y = notidata003y +parseInt(parse3);
 var minus003x =  parseInt(parse3);
 var minus003y =  parseInt(parse3);
 
@@ -493,8 +493,8 @@ if((parsingdata[4]<=plus003x)&&(parsingdata[5]<=plus003y)){
 
 
 // (4) 알람 연산
-var plus004x = parseInt(parse4);
-var plus004y = parseInt(parse4);
+var plus004x = notidata004x +parseInt(parse4);
+var plus004y = notidata004y +parseInt(parse4);
 var minus004x = parseInt(parse4);
 var minus004y =  parseInt(parse4);
 
@@ -507,8 +507,8 @@ if((parsingdata[6]<=plus004x)&&(parsingdata[7]<=plus004y)){
 
 
 // (5) 알람 연산
-var plus005x = parseInt(parse5);
-var plus005y = parseInt(parse5);
+var plus005x = notidata005x +parseInt(parse5);
+var plus005y = notidata005y +parseInt(parse5);
 var minus005x =  parseInt(parse5);
 var minus005y =  parseInt(parse5);
 
