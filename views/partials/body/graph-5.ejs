@@ -168,10 +168,7 @@ socket.on('news',function (alaram,dbprevData) {
     config1.data.datasets[0].data[i]=(dbprevData[i].beacon005x-settingdata1);
     config2.data.labels[i]=(dbprevData[i].rectime);
     config2.data.datasets[0].data[i]=(dbprevData[i].beacon005y-settingdata2);
-    //config1.data.datasets[1].data[i]=(dbprevData[i].beacon001y-settingdata2);
-    //config1.data.datasets[2].data[i]=(dbprevData[i].beacon003-settingdata3);
-    //config1.data.datasets[3].data[i]=(dbprevData[i].beacon004-settingdata4);
-    //config1.data.datasets[4].data[i]=(dbprevData[i].beacon005-settingdata5);
+    
 
   }
 
@@ -269,23 +266,14 @@ console.log(recieveArray);
             if(config1.data.labels.length==21){
               config1.data.labels.shift(0,21);
               config1.data.datasets[0].data.shift(0,20);
-              //config1.data.datasets[1].data.shift(0,20);
-              //config1.data.datasets[2].data.shift(0,20);
-              //config1.data.datasets[3].data.shift(0,20);
-              //config1.data.datasets[4].data.shift(0,20);
-              config1.data.datasets[0].data.push(parsingdata[8]);
-              //config1.data.datasets[1].data.push(parsingdata[1]-settingdata2);
-              //config1.data.datasets[2].data.push(parsingdata[2]-settingdata3);
-              //config1.data.datasets[3].data.push(parsingdata[3]-settingdata4);
-              //config1.data.datasets[4].data.push(parsingdata[4]-settingdata5);
+             
+              config1.data.datasets[0].data.push(parsingdata[8]-settingdata1);
+              
 
             }
             else{
-              config1.data.datasets[0].data.push(parsingdata[8]);
-              //config1.data.datasets[1].data.push(parsingdata[1]-settingdata2);
-              //config1.data.datasets[2].data.push(parsingdata[2]-settingdata3);
-              //config1.data.datasets[3].data.push(parsingdata[3]-settingdata4);
-              //config1.data.datasets[4].data.push(parsingdata[4]-settingdata5);
+              config1.data.datasets[0].data.push(parsingdata[8]-settingdata1);
+              
 
           }
             window.myLine1.update();
@@ -301,23 +289,14 @@ console.log(recieveArray);
                   if(config2.data.labels.length==21){
                     config2.data.labels.shift(0,21);
                     config2.data.datasets[0].data.shift(0,20);
-                    //config2.data.datasets[1].data.shift(0,20);
-                    //config1.data.datasets[2].data.shift(0,20);
-                    //config1.data.datasets[3].data.shift(0,20);
-                    //config1.data.datasets[4].data.shift(0,20);
-                    config2.data.datasets[0].data.push(parsingdata[9]);
-                    //config1.data.datasets[1].data.push(parsingdata[1]-settingdata2);
-                    //config1.data.datasets[2].data.push(parsingdata[2]-settingdata3);
-                    //config1.data.datasets[3].data.push(parsingdata[3]-settingdata4);
-                    //config1.data.datasets[4].data.push(parsingdata[4]-settingdata5);
+                    
+                    config2.data.datasets[0].data.push(parsingdata[9]-settingdata2);
+                   
 
                   }
                   else{
-                    config2.data.datasets[0].data.push(parsingdata[9]);
-                    //config1.data.datasets[1].data.push(parsingdata[1]-settingdata2);
-                    //config1.data.datasets[2].data.push(parsingdata[2]-settingdata3);
-                    //config1.data.datasets[3].data.push(parsingdata[3]-settingdata4);
-                    //config1.data.datasets[4].data.push(parsingdata[4]-settingdata5);
+                    config2.data.datasets[0].data.push(parsingdata[9]-settingdata2);
+                    
 
                 }
                   window.myLine2.update();
