@@ -80,20 +80,20 @@
 <script src="/socket.io/socket.io.js"></script>
 
 <script>
-var settingdata1x = 0;
-var settingdata1y = 0;
+var settingdata1x = parseInt("<%=data1.rule001x%>");
+var settingdata1y = parseInt("<%=data1.rule001y%>");
 
-var settingdata2x = 0;
-var settingdata2y = 0;
+var settingdata2x = parseInt("<%=data2.rule002x%>");
+var settingdata2y = parseInt("<%=data2.rule002y%>");
 
-var settingdata3x = 0;
-var settingdata3y = 0;
+var settingdata3x = parseInt("<%=data3.rule003x%>");
+var settingdata3y = parseInt("<%=data3.rule003y%>");
 
-var settingdata4x = 0;
-var settingdata4y = 0;
+var settingdata4x = parseInt("<%=data4.rule004x%>");
+var settingdata4y = parseInt("<%=data4.rule004y%>");
 
-var settingdata5x = 0;
-var settingdata5y = 0;
+var settingdata5x = parseInt("<%=data5.rule005x%>");
+var settingdata5y = parseInt("<%=data5.rule005y%>");
 
 
 var socket = io.connect("http://localhost");

@@ -138,8 +138,8 @@
 <script src="/socket.io/socket.io.js"></script>
 
 <script>
-var settingdata1 = 0;
-var settingdata2 = 0;
+var settingdata1 = parseInt("<%=data2.rule003x%>");
+var settingdata2 = parseInt("<%=data2.rule003y%>");
 
 var socket = io.connect("http://localhost");
 var audio = new Audio();
@@ -168,9 +168,9 @@ var audiobutton = $("#audiobutton");
 socket.on('news',function (alaram,dbprevData) {
   for(var i=0;i<20;i++){
     config1.data.labels[i]=(dbprevData[i].rectime);
-    config1.data.datasets[0].data[i]=(dbprevData[i].beacon003x);
+    config1.data.datasets[0].data[i]=(dbprevData[i].beacon003x-settingdata1);
     config2.data.labels[i]=(dbprevData[i].rectime);
-    config2.data.datasets[0].data[i]=(dbprevData[i].beacon003y);
+    config2.data.datasets[0].data[i]=(dbprevData[i].beacon003y-settingdata2);
     //config1.data.datasets[1].data[i]=(dbprevData[i].beacon001y-settingdata2);
     //config1.data.datasets[2].data[i]=(dbprevData[i].beacon003-settingdata3);
     //config1.data.datasets[3].data[i]=(dbprevData[i].beacon004-settingdata4);
