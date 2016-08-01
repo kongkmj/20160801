@@ -17,7 +17,17 @@ var io = require('socket.io')(http);
 var data_001,data_002,data_003,data_004,data_005,data_006,data_007,data_008,data_009,data_0010;
 var noti001,noti002,noti003,noti004,noti005;
 var rule_001,rule_002,rule_003,rule_004,rule_005;
+var sendData001x;
+var sendData002x;
+var sendData003x;
+var sendData004x;
+var sendData005x;
 
+var sendData001y;
+var sendData002y;
+var sendData003y;
+var sendData004y;
+var sendData005y;
 
 
 var alaram=""; // 알람을 담을 그릇
@@ -38,7 +48,6 @@ var suck1,suck2,suck3,suck4,suck5;
 var duck1,duck2,duck3,duck4,duck5;
 
 var dbprevData = new Array(20); //역순으로 데이터를 찾기에 순서를 바꿔줄 그릇
-
 
 
 // TCP
@@ -83,13 +92,73 @@ var server = net.createServer(function (socket2) {
     //웹에서 주기버튼 눌렀을시
   io.on('connection',function (socket) {
     socket.on('intervalEV',function (message) {
+ if(rule_001.rule001x.length==1){
+        sendData001x="00"+rule_001.rule001x;
+      }
+      if(rule_001.rule001x.length==2){
+        sendData001x="0"+rule_001.rule001x;
+      }
+      if(rule_002.rule002x.length==1){
+        sendData002x="00"+rule_002.rule002x;
+      }
+      if(rule_002.rule002x.length==2){
+        sendData002x="0"+rule_002.rule002x;
+      }
+      if(rule_003.rule003x.length==1){
+        sendData003x="00"+rule_003.rule003x;
+      }
+      if(rule_003.rule003x.length==2){
+        sendData003x="0"+rule_003.rule003x;
+      }
+      if(rule_004.rule004x.length==1){
+        sendData004x="00"+rule_004.rule004x;
+      }
+      if(rule_004.rule004x.length==2){
+        sendData004x="0"+rule_004.rule004x;
+      }
+      if(rule_005.rule005x.length==1){
+        sendData005x="00"+rule_005.rule005x;
+      }
+      if(rule_005.rule005x.length==2){
+        sendData005x="0"+rule_005.rule005x;
+      }
+      if(rule_001.rule001y.length==1){
+        sendData001y="00"+rule_001.rule001y;
+      }
+      if(rule_001.rule001y.length==2){
+        sendData001y="0"+rule_001.rule001y;
+      }
+      if(rule_002.rule002y.length==1){
+        sendData002y="00"+rule_002.rule002y;
+      }
+      if(rule_002.rule002y.length==2){
+        sendData002y="0"+rule_002.rule002y;
+      }
+      if(rule_003.rule003y.length==1){
+        sendData003y="00"+rule_003.rule003y;
+      }
+      if(rule_003.rule003y.length==2){
+        sendData003y="0"+rule_003.rule003y;
+      }
+      if(rule_004.rule004y.length==1){
+        sendData004y="00"+rule_004.rule004y;
+      }
+      if(rule_004.rule004y.length==2){
+        sendData004y="0"+rule_004.rule004y;
+      }
+      if(rule_005.rule005y.length==1){
+        sendData005y="00"+rule_005.rule005y;
+      }
+      if(rule_005.rule005y.length==2){
+        sendData005y="0"+rule_005.rule005y;
+      }
       intervalmessage=message;
       socket2.write("a"+
-      rule_001.rule001x+"x"+rule_001.rule001y+"x"+rangedata[0]+"x"+
-      rule_002.rule002x+"x"+rule_002.rule002y+"x"+rangedata[1]+"x"+
-      rule_003.rule003x+"x"+rule_003.rule003y+"x"+rangedata[2]+"x"+
-      rule_004.rule004x+"x"+rule_004.rule004y+"x"+rangedata[3]+"x"+
-      rule_005.rule005y+"x"+rule_005.rule005y+"x"+rangedata[4]+"x"+
+      sendData001x+"x"+sendData001y+"x"+rangedata[0]+"x"+
+      sendData002x+"x"+sendData002y+"x"+rangedata[1]+"x"+
+      sendData003x+"x"+sendData003y+"x"+rangedata[2]+"x"+
+      sendData004x+"x"+sendData004y+"x"+rangedata[3]+"x"+
+      sendData005y+"x"+sendData005y+"x"+rangedata[4]+"x"+
       message+"b");
     });
 
@@ -103,13 +172,74 @@ var server = net.createServer(function (socket2) {
   suck3=0;
   suck4=0;
   suck5=0;
-    socket.on('standardData',function () {
-      socket2.write("a"+
-      rule_001.rule001x+"x"+rule_001.rule001y+"x"+rangedata[0]+"x"+
-      rule_002.rule002x+"x"+rule_002.rule002y+"x"+rangedata[1]+"x"+
-      rule_003.rule003x+"x"+rule_003.rule003y+"x"+rangedata[2]+"x"+
-      rule_004.rule004x+"x"+rule_004.rule004y+"x"+rangedata[3]+"x"+
-      rule_005.rule005y+"x"+rule_005.rule005y+"x"+rangedata[4]+"x"+
+      socket.on('standardData',function(){
+      if(rule_001.rule001x.length==1){
+        sendData001x="00"+rule_001.rule001x;
+      }
+      if(rule_001.rule001x.length==2){
+        sendData001x="0"+rule_001.rule001x;
+      }
+      if(rule_002.rule002x.length==1){
+        sendData002x="00"+rule_002.rule002x;
+      }
+      if(rule_002.rule002x.length==2){
+        sendData002x="0"+rule_002.rule002x;
+      }
+      if(rule_003.rule003x.length==1){
+        sendData003x="00"+rule_003.rule003x;
+      }
+      if(rule_003.rule003x.length==2){
+        sendData003x="0"+rule_003.rule003x;
+      }
+      if(rule_004.rule004x.length==1){
+        sendData004x="00"+rule_004.rule004x;
+      }
+      if(rule_004.rule004x.length==2){
+        sendData004x="0"+rule_004.rule004x;
+      }
+      if(rule_005.rule005x.length==1){
+        sendData005x="00"+rule_005.rule005x;
+      }
+      if(rule_005.rule005x.length==2){
+        sendData005x="0"+rule_005.rule005x;
+      }
+      if(rule_001.rule001y.length==1){
+        sendData001y="00"+rule_001.rule001y;
+      }
+      if(rule_001.rule001y.length==2){
+        sendData001y="0"+rule_001.rule001y;
+      }
+      if(rule_002.rule002y.length==1){
+        sendData002y="00"+rule_002.rule002y;
+      }
+      if(rule_002.rule002y.length==2){
+        sendData002y="0"+rule_002.rule002y;
+      }
+      if(rule_003.rule003y.length==1){
+        sendData003y="00"+rule_003.rule003y;
+      }
+      if(rule_003.rule003y.length==2){
+        sendData003y="0"+rule_003.rule003y;
+      }
+      if(rule_004.rule004y.length==1){
+        sendData004y="00"+rule_004.rule004y;
+      }
+      if(rule_004.rule004y.length==2){
+        sendData004y="0"+rule_004.rule004y;
+      }
+      if(rule_005.rule005y.length==1){
+        sendData005y="00"+rule_005.rule005y;
+      }
+      if(rule_005.rule005y.length==2){
+        sendData005y="0"+rule_005.rule005y;
+      }
+      socket2.write("a"+    
+  
+      sendData001x+"x"+sendData001y+"x"+rangedata[0]+"x"+
+      sendData002x+"x"+sendData002y+"x"+rangedata[1]+"x"+
+      sendData003x+"x"+sendData003y+"x"+rangedata[2]+"x"+
+      sendData004x+"x"+sendData004y+"x"+rangedata[3]+"x"+
+      sendData005y+"x"+sendData005y+"x"+rangedata[4]+"x"+
       intervalmessage+"b");
 	socket.disconnect();
     });
@@ -268,11 +398,11 @@ rcrule[4] = d015;
 //이상데이터
 
 //console.log(d016.length);
-/*
+
 if(d016.length!=3){
   socket2.write("tt");
 }
-*/
+
 
 //주기
 rcinterval = d016;
@@ -378,20 +508,79 @@ if(data){
 	fuck5=0;
   }
 
-/*
+
 //디바이스에서 보낸 데이터(주기,민감도)가 다를 경우
 if(rcrule[0]!=rangedata[0]||rcrule[1]!=rangedata[1]||rcrule[2]!=rangedata[2]||rcrule[3]!=rangedata[3]||rcrule[4]!=rangedata[4]||rcinterval!=intervalmessage){
-
-  socket2.write("a"+
-  rule_001.rule001x+"x"+rule_001.rule001y+"x"+rule_001.range1+"x"+
-  rule_002.rule002x+"x"+rule_002.rule002y+"x"+rule_002.range2+"x"+
-  rule_003.rule003x+"x"+rule_003.rule003y+"x"+rule_003.range3+"x"+
-  rule_004.rule004x+"x"+rule_004.rule004y+"x"+rule_004.range4+"x"+
-  rule_005.rule005y+"x"+rule_005.rule005y+"x"+rule_005.range5+"x"+
-  message+"b");
+  if(rule_001.rule001x.length==1){
+        sendData001x="00"+rule_001.rule001x;
+      }
+      if(rule_001.rule001x.length==2){
+        sendData001x="0"+rule_001.rule001x;
+      }
+      if(rule_002.rule002x.length==1){
+        sendData002x="00"+rule_002.rule002x;
+      }
+      if(rule_002.rule002x.length==2){
+        sendData002x="0"+rule_002.rule002x;
+      }
+      if(rule_003.rule003x.length==1){
+        sendData003x="00"+rule_003.rule003x;
+      }
+      if(rule_003.rule003x.length==2){
+        sendData003x="0"+rule_003.rule003x;
+      }
+      if(rule_004.rule004x.length==1){
+        sendData004x="00"+rule_004.rule004x;
+      }
+      if(rule_004.rule004x.length==2){
+        sendData004x="0"+rule_004.rule004x;
+      }
+      if(rule_005.rule005x.length==1){
+        sendData005x="00"+rule_005.rule005x;
+      }
+      if(rule_005.rule005x.length==2){
+        sendData005x="0"+rule_005.rule005x;
+      }
+      if(rule_001.rule001y.length==1){
+        sendData001y="00"+rule_001.rule001y;
+      }
+      if(rule_001.rule001y.length==2){
+        sendData001y="0"+rule_001.rule001y;
+      }
+      if(rule_002.rule002y.length==1){
+        sendData002y="00"+rule_002.rule002y;
+      }
+      if(rule_002.rule002y.length==2){
+        sendData002y="0"+rule_002.rule002y;
+      }
+      if(rule_003.rule003y.length==1){
+        sendData003y="00"+rule_003.rule003y;
+      }
+      if(rule_003.rule003y.length==2){
+        sendData003y="0"+rule_003.rule003y;
+      }
+      if(rule_004.rule004y.length==1){
+        sendData004y="00"+rule_004.rule004y;
+      }
+      if(rule_004.rule004y.length==2){
+        sendData004y="0"+rule_004.rule004y;
+      }
+      if(rule_005.rule005y.length==1){
+        sendData005y="00"+rule_005.rule005y;
+      }
+      if(rule_005.rule005y.length==2){
+        sendData005y="0"+rule_005.rule005y;
+      }  
+socket2.write("a"+
+  sendData001x+"x"+sendData001y+"x"+rangedata[0]+"x"+
+  sendData002x+"x"+sendData002y+"x"+rangedata[1]+"x"+
+  sendData003x+"x"+sendData003y+"x"+rangedata[2]+"x"+
+  sendData004x+"x"+sendData004y+"x"+rangedata[3]+"x"+
+  sendData005y+"x"+sendData005y+"x"+rangedata[4]+"x"+
+  intervalmessage+"b");
 
   }
-*/
+
 
 
 }
@@ -634,7 +823,7 @@ io.emit('chat message',parsingdata,alaram);
 
 //test
 io.emit('chat message',parsingdata,alaram,recieveArray);
-//console.log(recieveArray);
+console.log(recieveArray);
   });
 
 
